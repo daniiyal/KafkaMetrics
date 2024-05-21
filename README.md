@@ -12,6 +12,8 @@
 ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white)
 ![GitHub](https://img.shields.io/badge/git-%23121011.svg?style=for-the-badge&logo=github&logoColor=white "Git")
 ![Swagger](https://img.shields.io/badge/Swagger-%2523121011.svg?style=for-the-badge&logo=swagger&logoColor=white "Swagger")
+![Kafka](https://img.shields.io/badge/Kafka-black?style=for-the-badge&logo=apachekafka&logoColor=white&labelColor=black "Kafka")
+
 
 ### Запуск и использование системы
 Запуск сервисов осуществляется через docker-compose файл\
