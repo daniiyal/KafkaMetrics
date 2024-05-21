@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: MetricProducer
+  kafka:
+    bootstrap-servers: http://host.docker.internal:29092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.IntegerSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    topic: metrics-topic
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+
+management:
+  endpoints.web.exposure.include: "*"
+

@@ -1,0 +1,28 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: MetricConsumer
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://host.docker.internal:5432/postgres
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+  kafka:
+    topic: "metrics-topic"
+    consumer:
+      bootstrap-servers: http://host.docker.internal:29092
+      key-deserializer: org.apache.kafka.common.serialization.IntegerDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+      group-id: "metrics-topic-group-1"
+
+app:
+  producer:
+    url: http://host.docker.internal:8080/api/v1/
